@@ -8,12 +8,18 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
 
-    <body>
+    <body class="fade-out">
+        <!-- content fade in -->
+        <script>        
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+            });
+        </script>
+
         <nav>
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
         </nav>
 
         <div class="container">
@@ -44,7 +50,29 @@
                     <img src="./img/GitHub.png" alt="">
                 </div>
             </div>
+
+            <!-- NEW CONTACT FORM -->
+            <div id="contact">
+                <button onclick="openForm()" class="popup-btn">CONTACT</button>
+                <div class="form-popup" id="contactForm">
+                    <form action="https://formspree.io/f/mwkaowdv" method="POST" class="form-container">
+                        <h1>Contact</h1>
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Name" name="name" required>
+
+                        <label for="email"><b>Email address</b></label>	
+                        <input type="text" placeholder="Email address" name="email" required>
+
+                        <label for="message"><b>Message</b></label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+           </div>
+        </div>
     
+            <!-- OLD CONTACT FORM
             <div id="contact" class="row bump-up">
                 <div class="col-1">
                     <img src="./img/contact.jpg" alt="">
@@ -62,11 +90,12 @@
                     </form>
                 </div>
             </div>
+            -->
         </div>
 
         <footer>
             <p>&copy; Kris Lovett, 2021</p>
         </footer>
-
+        <script src="./js/main.js"></script>
     </body>
 </html>
