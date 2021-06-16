@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     margin: 0%;
     font-family: 'Noto Sans JP', sans-serif;
-    background-image: url(/img/cartographer.png);
+    background-image: url("../img/cartographer.png");
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 nav {
@@ -37,7 +48,7 @@ nav a:hover {
 .header {
     display: block;
     width: 100%;
-    background:url("/img/header.jpg"), rgb(51,51,51);
+    background:url("../img/header.jpg"), rgb(51,51,51);
     background-size: 100%;
     text-align: center;
     padding: 30px 0 30px 0;
@@ -49,6 +60,7 @@ nav a:hover {
     text-transform: uppercase;
     padding: 30px;
     padding-bottom: 0px;
+    font-size: 3vw;
 }
 
 .header p {
@@ -103,27 +115,6 @@ nav a:hover {
     background-color: rgb(51,51,51,.1);
 }
 
-form {
-    padding: 0px 15px 10px 15px;
-}
-
-input {
-    display: block;
-    padding: 6px;
-}
-
-input[type="text"] {
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    width: 90%;
-}
-
-input[type="submit"] {
-    margin: auto;
-    width: 80%;
-}
-
 footer {
     display: block;
     height: 40px;
@@ -133,6 +124,102 @@ footer {
     background-color: rgb(20, 117, 173);
     color: rgb(255,255,255);
     text-align: center;
+    z-index: 0;
+}
+
+/* CONTACT BUTTON */
+.popup-btn {
+    position: fixed;
+    bottom: 3.75vw;
+    right: 1.75vw;
+    width: 20vw;
+    background-color: rgb(68, 114, 62);
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-animation: movePopup 2s;
+    animation: movePopup 2s;
+}
+
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+/* CONTACT FORM */
+.form-popup {
+    border: 3px solid rgb(51,51,51);
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 3.75vw;
+    right: 1.75vw;
+    width: 30vw;
+}
+
+.form-container {
+    max-width: 28vw;
+    padding: 1vw;
+    background-color: #fff;
+}
+
+.form-container h1 {
+    font-size: 1.75vw;
+    margin: 10px;
+}
+
+.form-container input[type=text],
+.form-container textarea {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    background: gainsboro;
+    font-size: 1vw;
+} 
+
+button {
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: rgb(51,51,51);
+}
+
+.form-container .btn {
+    background-color: #fff;
+    color: rgb(51,51,51);
+    border-color: rgb(51,51,51);
+    margin-bottom: 5px;
+}
+
+.form-container .cancel {
+    background-color: rgb(51,51,51);
+    color: white;
+}
+
+.form-container .cancel:hover {
+    color: #fff;
+    background-color: darkred;
 }
 
 @media screen and (max-width: 900px) {
