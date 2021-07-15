@@ -1,1 +1,1 @@
-# This is a portfolio showcasing my HTML and CSS abilities, with a link to my other projects on GitHub.
+This is a portfolio of my various web and Python projects.
