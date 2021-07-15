@@ -1,229 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans+Condensed:300&display=swap');
 
-html {
-    scroll-behavior: smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 body {
-    width: 100%;
-    margin: 0%;
-    font-family: 'Noto Sans JP', sans-serif;
-    background-image: url("../img/cartographer.png");
-    opacity: 1;
-    transition: 1s opacity;
+    font-size: 16pt;
 }
 
-body.fade-out {
-    opacity: 0;
-    transition: none;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-nav {
-    background-color: rgb(68, 114, 62);
-    position: fixed;
+/* NAVIGATION BAR */
+#navbar {
+    height: 90px;
+    background: #000 url("../img/navbar.jpg");
+    color: #fff;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 16pt;
+    display: block;
+    z-index: 10;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    display: block;
-    z-index: 1;
 }
 
-nav a {
-    color: rgb(255,255,255);
-    display: inline-block;
+#navbar h1 {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 28px;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
     padding: 15px;
-    text-decoration: none;
+    background-color: rgba(0, 0, 0, .7);
 }
 
-nav a:hover {
-    background-color: rgb(20, 117, 173);
-}
-
-.container {
+#navbar ul li a {
     display: block;
-    position: relative;
-    top: 40px;
-}
-
-.header {
-    display: block;
-    width: 100%;
-    background:url("../img/header.jpg"), rgb(51,51,51);
-    background-size: 100%;
     text-align: center;
-    padding: 30px 0 30px 0;
-    color: rgb(255,255,255);
-    text-shadow: 2px 2px 4px rgb(51,51,51);
 }
 
-.header h1 {
-    text-transform: uppercase;
-    padding: 30px;
-    padding-bottom: 0px;
-    font-size: 3vw;
-}
-
-.header p {
-    padding: 30px;
-    padding-top: 0px;
-}
-
-.row {
-    background-color: rgb(255,255,255);
-    max-width: 70%;
-    margin: auto;
-    display: flex;
-    overflow: hidden;
-}
-
-.bump-up {
-    position: relative;
-    top: -5px;
-}
-
-.bump-up:last-of-type {
-    position: relative;
-    top: -10px;
-}
-
-.col-1 {
-    flex: 50%;
-}
-
-.col-1 img {
-    width: 100%;
-    object-fit: fill;
-}
-
-.col-2 {
-    flex: 50%;
-    position: relative;
-    top: -5px;
-}
-
-.col-2 h1 {
-    padding: 10px 0 0 20px;
-    text-transform: uppercase;
-}
-
-.col-2 p {
-    text-align: justify;
-    padding: 0 30px 0 30px;
-}
-
-.col-2:hover {
-    background-color: rgb(51,51,51,.1);
-}
-
-footer {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    position: relative;
-    bottom: -5px;
-    background-color: rgb(20, 117, 173);
-    color: rgb(255,255,255);
-    text-align: center;
-    z-index: 0;
-}
-
-/* CONTACT BUTTON */
-.popup-btn {
-    position: fixed;
-    bottom: 3.75vw;
-    right: 1.75vw;
-    width: 20vw;
-    background-color: rgb(68, 114, 62);
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Noto Sans JP', sans-serif;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    -webkit-animation: movePopup 2s;
-    animation: movePopup 2s;
-}
-
-@keyframes movePopup {
-    from {right: -40vw;} 
-    to {right: 1.75vw;}
-}
-
-@-webkit-keyframes movePopup {
-    from {right: -40vw;} 
-    to {right: 1.75vw;}
-}
-
-/* CONTACT FORM */
-.form-popup {
-    border: 3px solid rgb(51,51,51);
-    z-index: 10;
-    display: none;
-    position: fixed;
-    bottom: 3.75vw;
-    right: 1.75vw;
-    width: 30vw;
-}
-
-.form-container {
-    max-width: 28vw;
-    padding: 1vw;
-    background-color: #fff;
-}
-
-.form-container h1 {
-    font-size: 1.75vw;
-    margin: 10px;
-}
-
-.form-container input[type=text],
-.form-container textarea {
-    font-family: 'Noto Sans JP', sans-serif;
-    display: block;
-    width: 90%;
-    padding: 10px;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: none;
-    background: gainsboro;
-    font-size: 1vw;
-} 
-
-button {
-    display: block;
+.current, #navbar ul li a:hover {
+    color: orange;
     font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
-    width: 90%;
-    margin: auto;
+}
+
+
+/* DROPDOWN MENU FOR PROJECTS LINKS */
+.sublist {
+    width: 90px;
+}
+
+#arrow {
+    display: inline-block;
+    font-size: 10pt;
+    position: relative;
+    top: -1px;
+    transition: transform .5s;
+}
+
+.sublist:hover #arrow {
+    transform: rotate(-180deg);
+}
+
+.sublist-content {
+    display: none;
+}
+
+.sublist:hover .sublist-content {
     height: auto;
 }
 
-button:hover, .form-container .btn:hover {
-    color: white;
-    background-color: rgb(51,51,51);
+.sublist-content a {
+    margin-top: 10px;
+    display: block;
 }
 
-.form-container .btn {
-    background-color: #fff;
-    color: rgb(51,51,51);
-    border-color: rgb(51,51,51);
-    margin-bottom: 5px;
+/* MAIN BODY */
+.content {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 90px;
+    width: 100%;
+    min-height: 50vh;
 }
 
-.form-container .cancel {
-    background-color: rgb(51,51,51);
-    color: white;
+h1 {
+    text-align: center;
+    font-size: 26pt;
+    text-transform: uppercase;
 }
 
-.form-container .cancel:hover {
+/* HOME PAGE PROJECT PREVIEWS */
+.project {
+    width: 100%;
+    padding: 20px;
+    display: inline-block;
+}
+
+.project h2 {
+    text-transform: uppercase;
+}
+
+.project p {
+    margin-bottom: 25px;
+}
+
+.project a {
     color: #fff;
-    background-color: darkred;
+    background-color: #000;
+    padding: 10px;
+    float: right;
+    margin: 8px;
 }
 
-@media screen and (max-width: 900px) {
-    .row {
-        max-width: 100%;
+.project a:hover {
+    color: #000;
+    background-color: orange;
+}
+
+.project img {
+    width: 30%;
+    margin: 20px;
+    border: 1px solid black
+}
+
+/* ODD ROW PROJECT PREVIEWS */
+.odd {
+    background-color: rgb(223, 223, 223);
+}
+
+.odd img {
+    float: left;
+}
+
+.odd .project-text {
+    float: right;
+    width: 50%;
+}
+
+/* EVEN ROW PROJECT PREVIEWS */
+.even {
+    background-color: #fff;
+}
+
+.even img {
+    float: right;
+}
+
+.even .project-text {
+    float: left;
+    width: 50%;
+}
+
+/*BOTTOM AND FOOTER */
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    bottom: 0px;
+    width: 100%;
+    display:block;
+    height: 300px;
+    position: relative;
+    top: 90px;
+}
+
+footer img {
+    max-width: 100%;
+    height: 250px;
+    margin-top: -5px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1440px) {
+    #bottom-banner {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #bottom-banner {
+        height: 200px;
     }
 }
