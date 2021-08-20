@@ -39,7 +39,17 @@ a {
     font-size: 28px;
 }
 
+#mobile-arrow {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: none;
+    font-size: 16pt;
+    transition: transform .5s;
+}
+
 #navbar ul {
+    display: block;
     list-style: none;
     float: right;
 }
@@ -185,6 +195,16 @@ h1 {
     border: 1px solid orange;
 }
 
+/* ABOUT BLURB */
+#about {
+    padding: 15px;
+    background-color:#ececec;
+}
+
+#about p {
+    padding: 15px;
+}
+
 /* PREVIEW IMAGE LIGHTBOX */
 #lightbox {
     position: fixed;
@@ -257,11 +277,15 @@ h1 {
 #contact-popup input {
     margin-bottom: 10px;
     width: 100%;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 #contact-popup textarea {
     width: 100%;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-buttons {
@@ -292,30 +316,118 @@ footer {
     background: #000;
     color: #fff;
     text-align: center;
-    padding: 5px;
+    padding: 0px;
     bottom: 0px;
     width: 100%;
     display:block;
     height: 300px;
-    position: relative;
-    top: 90px;
 }
 
 footer img {
     max-width: 100%;
     height: 250px;
-    margin-top: -5px;
+    margin: -5px;
     object-fit: cover;
 }
 
-@media screen and (max-width: 1440px) {
-    #bottom-banner {
-        height: 300px;
+
+
+@media screen and (max-width: 769px) {
+    .project-row {
+        width: 100%;
+        display: block;
+    }
+    
+    .project {
+        width: 100%;
+        padding: 20px;
+        flex: 100%;
+        display: flex;
+        background-color:#e1eefc;
+    }
+
+    .project:nth-child(2) {
+        background-color: #fff;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    #bottom-banner {
-        height: 200px;
+@media screen and (max-width: 526px) {
+    #navbar {
+        height: auto;
+    }
+
+    #navbar ul {
+        display: block;
+        float:left;
+    }
+
+    .content {
+        position: relative;
+        top: 135px;
+    }
+
+    #contact-btn {
+        padding: 4px 25px;
+        font-size: 18pt;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .project {
+        width: 100%;
+        padding: 20px;
+        display: block;
+    }
+
+    .project-img {
+        width: 100%;
+        display: block;
+    }
+
+    .project-text {
+        width: 100%;
+        padding: 30px;
+        padding-bottom: 60px;
+        display: block;
+    }
+
+    #contact-btn {
+        padding: 4px 25px;
+        font-size: 16pt;
+    }
+    
+}
+
+@media screen and (max-width: 385px) {
+    #navbar h1 {
+        margin-left: 10px;
+    }
+
+    #mobile-arrow {
+        display: inline-block;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        display:block;
+    }
+
+    #navbar ul li a {
+        text-align: left;
+    }
+
+    .content {
+        position: relative;
+        top: 75px;
+    }
+
+    #contact-btn {
+        padding: 4px 25px;
+        font-size: 16pt;
     }
 }

@@ -1,4 +1,4 @@
-// JQuery to control dropdown list in the navbar
+// control dropdown list in the navbar
 $(function(){
     $(".sublist").mouseenter(function(){
         // Prevents dropdown from bugging out if .sublist is moused over again before the current animation is complete
@@ -16,7 +16,33 @@ $(function(){
     });
 });
 
-// JQuery lightbox for project screenshots
+// control dropdown for links on mobile
+$(function(){
+    $("#mobile-arrow").click(function(){
+        // Prevents dropdown from bugging out if .sublist is moused over again before the current animation is complete
+        if ($(':animated').length) {
+            return false;
+        }
+        $("#links").slideDown(500);
+    });
+
+    $("#mobile-arrow").click(function(){
+        if ($(':animated').length) {
+            return false;
+        }
+        $("#links").slideUp(500);
+    });
+});
+
+// make sure links are visible if screen size is increased above threshold to hide links
+$(window).resize(function() {
+    if (screen.width > 386) {
+        $("#links").slideDown(1);
+    };
+});
+
+
+// lightbox for project screenshots
 $(function(){
     $('.preview').click(function(e) {
         e.preventDefault();
