@@ -120,6 +120,7 @@ h1 {
 }
 
 /* HOME PAGE PROJECT PREVIEWS */
+
 .project-row {
     width: 100%;
     display: flex;
@@ -132,15 +133,15 @@ h1 {
     display: flex;
 }
 
-.project h2 {
+.project h2, .p5js-project h2 {
     text-transform: uppercase;
 }
 
-.project p {
+.project p, .p5js-project p {
     margin-bottom: 25px;
 }
 
-.project a {
+.project a, .p5js-project a {
     color: #fff;
     background-color: #000;
     padding: 10px;
@@ -148,7 +149,7 @@ h1 {
     margin: 8px;
 }
 
-.project a:hover {
+.project a:hover, .p5js-project a:hover {
     color: #000;
     background-color: orange;
 }
@@ -195,10 +196,32 @@ h1 {
     border: 1px solid orange;
 }
 
+/* P5.JS PREVIEWS */
+#p5js-projects {
+    display: block;
+    background-color: #ececec;
+    padding-bottom: 50px;
+}
+
+#p5js-projects h1 {
+    padding: 20px;
+}
+
+#p5js-projects h2, #p5js-projects p {
+    padding: 20px;
+}
+
+#p5js-projects a {
+    float: none;
+}
+
+iframe {
+    border: 0;
+}
+
 /* ABOUT BLURB */
 #about {
     padding: 15px;
-    background-color:#ececec;
 }
 
 #about p {
@@ -281,7 +304,6 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 #contact-popup textarea {
     width: 100%;
     font-size: 12pt;
@@ -313,6 +335,8 @@ h1 {
 /*BOTTOM AND FOOTER */
 
 footer {
+    position: relative;
+    top: 90px;
     background: #000;
     color: #fff;
     text-align: center;
@@ -324,7 +348,7 @@ footer {
 }
 
 footer img {
-    max-width: 100%;
+    width: 100%;
     height: 250px;
     margin: -5px;
     object-fit: cover;

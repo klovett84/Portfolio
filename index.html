@@ -1,246 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Kris Lovett</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
     <nav id="navbar">
-        <h1 class="logo"><a href="index.html">Kris Lovett</a><span id="mobile-arrow">&#9776;</span></h1>
-        <ul id="links">
-            <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li>
-                <div class="sublist">
-                    <a href="#projects">Projects <span id="arrow">	
-                        &#5584;</span></a>
-                        <div class="sublist-content">
-                            <a href="tictactoe.html">Tic Tac Toe</a>
-                            <a href="calculator.html">Calculator</a>
-                            <a href="todo.html">To-Do List</a>
-                        </div>
-                </div>
-                
-            </li>
-            <li><a href="https://github.com/krislovett">GitHub</a></li>
-        </ul>
+      <h1 class="logo">
+        <a href="index.html">Kris Lovett</a
+        ><span id="mobile-arrow">&#9776;</span>
+      </h1>
+      <ul id="links">
+        <li><a class="current" href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <div class="sublist">
+            <a href="#projects">Projects <span id="arrow"> &#5584;</span></a>
+            <div class="sublist-content">
+              <a href="tictactoe.html">Tic Tac Toe</a>
+              <a href="calculator.html">Calculator</a>
+              <a href="todo.html">To-Do List</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="https://github.com/krislovett">GitHub</a></li>
+      </ul>
     </nav>
-       
-    
+
     <div class="container">
-        <div class="content">
-
-            <!-- ROW 1 -->
-            <div class="project-row">
-                <div class="project dark">
-                    <div class="project-img">
-                        <img src="./img/screenshotTwentyOne.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>TwentyOne</h2>
-                        <p>
-                            A fully-functional blackjack console application. Made with C# and .NET.
-                        </p>
-                        <a href="https://github.com/krislovett/TTA-C-Sharp/tree/main/TwentyOne" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                
-                <div class="project light">
-                    <div class="project-img">
-                        <img src="./img/screenshotNewsletter.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Newsletter</h2>
-                        <p>
-                            MVC site that allows users to sign up for a mock newsletter. It has an admin page to view signup information and unsubscribe users. Made with ASP.NET and Bootstrap.
-                        </p>
-                        <a href="tictactoe.html">Play in browser</a>
-                        <a href="https://github.com/krislovett/TTA-C-Sharp/tree/main/NewsletterAppMVC" target="_blank">GitHub</a>
-                    </div>
-                </div>
+      <div class="content">
+        <div id="projects">
+          <!-- ROW 1 -->
+          <div class="project-row">
+            <div class="project dark">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotTwentyOne.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>TwentyOne</h2>
+                <p>
+                  A fully-functional blackjack console application. Made with C#
+                  and .NET.
+                </p>
+                <a
+                  href="https://github.com/krislovett/TTA-C-Sharp/tree/main/TwentyOne"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
 
-            <!-- ROW 2 -->
-            <div class="project-row">
-                <div class="project light">
-                    <div class="project-img">
-                        <img src="./img/screenshotCheckbook.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Django Checkbook</h2>
-                        <p>
-                            A mock banking website with basic functionality to create a user, add transactions, and view the account balance. Made with Django.
-                        </p>
-                        <a href="https://github.com/krislovett/Django_Checkbook" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                
-                <div class="project dark">
-                    <div class="project-img">
-                        <img src="./img/screenshotTicTacToe.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Tic Tac Toe</h2>
-                        <p>
-                            A basic tic tac toe game played against the computer. Made with HTML, CSS, and JavaScript.
-                        </p>
-                        <a href="tictactoe.html">Play in browser</a>
-                        <a href="https://github.com/krislovett/JavaScript-Projects/tree/main/TicTacToe" target="_blank">GitHub</a>
-                    </div>
-                </div>
+            <div class="project light">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotNewsletter.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Newsletter</h2>
+                <p>
+                  MVC site that allows users to sign up for a mock newsletter.
+                  It has an admin page to view signup information and
+                  unsubscribe users. Made with ASP.NET and Bootstrap.
+                </p>
+                <a href="tictactoe.html">Play in browser</a>
+                <a
+                  href="https://github.com/krislovett/TTA-C-Sharp/tree/main/NewsletterAppMVC"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="project-row">
+            <div class="project light">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotCheckbook.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Django Checkbook</h2>
+                <p>
+                  A mock banking website with basic functionality to create a
+                  user, add transactions, and view the account balance. Made
+                  with Django.
+                </p>
+                <a
+                  href="https://github.com/krislovett/Django_Checkbook"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
 
-            <!-- ROW 3 -->
-            <div class="project-row">
-                <!-- COLUMN 1 -->
-                <div class="project dark">
-                    <div class="project-img">
-                        <img src="./img/screenshotCalculator.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                            <h2>Calculator</h2>
-                            <p>
-                                A calculator with addition, subtraction, multiplication, and division functionality. Made with HTML, CSS, and JavaScript.
-                            </p>
-                            <a href="calculator.html">Use in browser</a>
-                            <a href="https://github.com/krislovett/JavaScript-Projects/tree/main/Calculator" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                
-                <!-- COLUMN 2 -->
-                <div class="project light">
-                    <div class="project-img">
-                        <img src="./img/screenshotToDo.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>To-Do List</h2>
-                        <p>
-                            A to-do list app with functionality to add and delete tasks. Made with HTML, CSS, and JavaScript.
-                        </p>
-                        <a href="todo.html">Use in browser</a>
-                    </div>
-                </div>
+            <div class="project dark">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotTicTacToe.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Tic Tac Toe</h2>
+                <p>
+                  A basic tic tac toe game played against the computer. Made
+                  with HTML, CSS, and JavaScript.
+                </p>
+                <a href="tictactoe.html">Play in browser</a>
+                <a
+                  href="https://github.com/krislovett/JavaScript-Projects/tree/main/TicTacToe"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 3 -->
+          <div class="project-row">
+            <!-- COLUMN 1 -->
+            <div class="project dark">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotCalculator.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Calculator</h2>
+                <p>
+                  A calculator with addition, subtraction, multiplication, and
+                  division functionality. Made with HTML, CSS, and JavaScript.
+                </p>
+                <a href="calculator.html">Use in browser</a>
+                <a
+                  href="https://github.com/krislovett/JavaScript-Projects/tree/main/Calculator"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
 
-            <!-- ROW 4 -->
-            <div class="project-row">
-                <!-- COLUMN 1 -->
-                <div class="project light">
-                    <div class="project-img">
-                        <img src="./img/screenshotPizza.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Pizza Menu</h2>
-                        <p>
-                            A mock webpage for a pizza restaurant. Allows user to select pizza size and toppings, then calculates price. Made with HTML, CSS, and JavaScript.
-                        </p>
-                        <a href="pizza.html">Use in browser</a>
-                        <a href="https://github.com/krislovett/JavaScript-Projects/tree/main/Pizza_Project" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                
-                <!-- COLUMN 2 -->
-                <div class="project dark">
-                    <div class="project-img">
-                        <img src="./img/screenshotFukushuu.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Fukushuu</h2>
-                        <p>
-                            A webpage with Japanese language review content. In progress. Made with HTML, CSS, and JavaScript.
-                        </p>
-                        <a href="fukushuu.html">Use in browser</a>
-                        <a href="https://github.com/krislovett/Fukushuu" target="_blank">GitHub</a>
-                    </div>
-                </div>
+            <!-- COLUMN 2 -->
+            <div class="project light">
+              <div class="project-img">
+                <img src="./img/screenshotToDo.png" alt="" class="preview" />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>To-Do List</h2>
+                <p>
+                  A to-do list app with functionality to add and delete tasks.
+                  Made with HTML, CSS, and JavaScript.
+                </p>
+                <a href="todo.html">Use in browser</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 4 -->
+          <div class="project-row">
+            <!-- COLUMN 1 -->
+            <div class="project light">
+              <div class="project-img">
+                <img src="./img/screenshotPizza.png" alt="" class="preview" />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Pizza Menu</h2>
+                <p>
+                  A mock webpage for a pizza restaurant. Allows user to select
+                  pizza size and toppings, then calculates price. Made with
+                  HTML, CSS, and JavaScript.
+                </p>
+                <a href="pizza.html">Use in browser</a>
+                <a
+                  href="https://github.com/krislovett/JavaScript-Projects/tree/main/Pizza_Project"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
 
-            <!-- ROW 5 -->
-            <div class="project-row">
-                <!-- COLUMN 1 -->
-                <div class="project dark">
-                    <div class="project-img">
-                        <img src="./img/screenshotWebPageGen.png" alt="" class="preview">
-                        <p>Click to enlarge.</p>
-                    </div>
-                    <div class="project-text">
-                        <h2>Web Page Generator</h2>
-                        <p>
-                            A simple program that takes text input and generates a webpage with that input as a header. Made with Python and HTML.
-                        </p>
-                        <a href="https://github.com/krislovett/Python-Projects/tree/main/WebPageGenerator" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                
-                <!-- COLUMN 2 -->
-                <div class="project light">
-                    <div class="project-img">
-                        <img src="./img/screenshotFileTransfer.png" alt="">
-                    </div>
-                    <div class="project-text">
-                        <h2>File Transfer</h2>
-                        <p>
-                            A program that transfers any files modified within the last 24 hours from a selected source folder to a selected destination folder. Made with Python.
-                        </p>
-                        <a href="https://github.com/krislovett/Python-Projects/tree/main/FileTransfer" target="_blank">GitHub</a>
-                    </div>
-                </div>
+            <!-- COLUMN 2 -->
+            <div class="project dark">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotFukushuu.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Fukushuu</h2>
+                <p>
+                  A webpage with Japanese language review content. In progress.
+                  Made with HTML, CSS, and JavaScript.
+                </p>
+                <a href="fukushuu.html">Use in browser</a>
+                <a href="https://github.com/krislovett/Fukushuu" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 5 -->
+          <div class="project-row">
+            <!-- COLUMN 1 -->
+            <div class="project dark">
+              <div class="project-img">
+                <img
+                  src="./img/screenshotWebPageGen.png"
+                  alt=""
+                  class="preview"
+                />
+                <p>Click to enlarge.</p>
+              </div>
+              <div class="project-text">
+                <h2>Web Page Generator</h2>
+                <p>
+                  A simple program that takes text input and generates a webpage
+                  with that input as a header. Made with Python and HTML.
+                </p>
+                <a
+                  href="https://github.com/krislovett/Python-Projects/tree/main/WebPageGenerator"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
 
-            <!-- ABOUT BLURB -->
-            <div id="about">
-                <h1>About</h1>
-                <p>I am a current student at The Tech Academy's Software Developer Boot Camp to become a full-stack developer. I have experience with HTML, CSS, JavaScript, and Bootstrap, as well as Python and Django, C#, .NET, and ASP.NET.</p>
+            <!-- COLUMN 2 -->
+            <div class="project light">
+              <div class="project-img">
+                <img src="./img/screenshotFileTransfer.png" alt="" />
+              </div>
+              <div class="project-text">
+                <h2>File Transfer</h2>
+                <p>
+                  A program that transfers any files modified within the last 24
+                  hours from a selected source folder to a selected destination
+                  folder. Made with Python.
+                </p>
+                <a
+                  href="https://github.com/krislovett/Python-Projects/tree/main/FileTransfer"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
             </div>
+          </div>
         </div>
-    
-        <div id="contact">
-            <button id="contact-btn">
-                Contact
-            </button>
-            <div id="contact-popup">
-                <form action="https://formspree.io/f/xdoylbdb" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" required>
+        <div id="p5js-projects">
+          <h1>p5.js Projects</h1>
 
-                    <label for="message">Message:</label>
-                    <textarea name="message" cols="50" rows="10" required></textarea>
-
-                    <div class="form-buttons">
-                        <button id="submit" type="submit">Submit</button>
-                        <button id="close" type="button">Close</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <footer>
-            <img src="./img/navbar-flipped.jpg" alt="">
-            <p>Copyright &copy;
-                <script>
-                    var today = new Date ();
-                    document.write(today.getFullYear());
-                </script>
-                Kris Lovett
+          <div class="p5js-project">
+            <h2>Circle Painter</h2>
+            <iframe
+              src="https://preview.p5js.org/krislovett/embed/IpbaudA9I"
+              width="100%"
+              height="350px"
+            ></iframe>
+            <p>
+              Click and move cursor to draw on the canvas. Double-click to clear
+              the canvas.
             </p>
-        </footer>
+            <a
+              href="https://editor.p5js.org/krislovett/sketches/IpbaudA9I"
+              target="_blank"
+              >View in p5.js web editor</a
+            >
+          </div>
+
+          <div class="p5js-project">
+            <h2>Random Quads</h2>
+            <iframe
+              src="https://preview.p5js.org/krislovett/embed/6HFUP_E1R"
+              width="100%"
+              height="350px"
+            ></iframe>
+            <p>Random polygons of random colors fill the screen.</p>
+            <a
+              href="https://editor.p5js.org/krislovett/sketches/6HFUP_E1R"
+              target="_blank"
+              >View in p5.js web editor</a
+            >
+          </div>
+        </div>
+
+        <!-- ABOUT BLURB -->
+        <div id="about">
+          <h1>About</h1>
+          <p>
+            I am a current student at The Tech Academy's Software Developer Boot
+            Camp to become a full-stack developer. I have experience with HTML,
+            CSS, JavaScript, and Bootstrap, as well as Python and Django, C#,
+            .NET, and ASP.NET.
+          </p>
+        </div>
+      </div>
+
+      <div id="contact">
+        <button id="contact-btn">Contact</button>
+        <div id="contact-popup">
+          <form action="https://formspree.io/f/xdoylbdb" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea name="message" cols="50" rows="10" required></textarea>
+
+            <div class="form-buttons">
+              <button id="submit" type="submit">Submit</button>
+              <button id="close" type="button">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <img
+          src="./img/navbar-flipped.jpg"
+          alt="Bottom header"
+          draggable="false"
+        />
+        <p>
+          Copyright &copy;
+          <script>
+            var today = new Date();
+            document.write(today.getFullYear());
+          </script>
+          Kris Lovett
+        </p>
+      </footer>
     </div>
-    
+
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
