@@ -118,7 +118,7 @@ h2 {
 /* ABOUT BLURB */
 #about {
   background-color: #455761;
-  background-image: linear-gradient(0deg, rgba(47,47,46,0.5) 0%, rgba(47,47,46,0) 100%), url("/img/headerSpiro.png");
+  background-image: linear-gradient(0deg, rgba(47,47,46,0.5) 0%, rgba(47,47,46,0) 100%), url("./img/headerSpiro.png");
   background-position: 100% 100%;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -144,7 +144,7 @@ h2 {
 /* PROJECTS */
 #projects {
   width: 100%;
-  background: repeat #455761 url("/img/tileSpiro.png");
+  background: repeat #455761 url("./img/tileSpiro.png");
 }
 
 .project-header {
