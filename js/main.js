@@ -1,20 +1,4 @@
-// control dropdown list in the navbar
-$(function(){
-    $(".sublist").mouseenter(function(){
-        // Prevents dropdown from bugging out if .sublist is moused over again before the current animation is complete
-        if ($(':animated').length) {
-            return false;
-        }
-        $(".sublist-content").slideDown(500);
-    });
-
-    $(".sublist").mouseleave(function(){
-        if ($(':animated').length) {
-            return false;
-        }
-        $(".sublist-content").slideUp(500);
-    });
-});
+////////// MOBILE DROPDOWN ///////////
 
 // control dropdown for links on mobile
 $(function(){
@@ -24,23 +8,78 @@ $(function(){
             return false;
         }
         $("#links").slideDown(500);
+        $("#navbar").css("height", "290px");
     });
 
     $("#mobile-arrow").click(function(){
         if ($(':animated').length) {
             return false;
         }
-        $("#links").slideUp(500);
+        $("#links").slideUp(0);
+        $("#navbar").css("height", "90px");
+
     });
 });
 
 // make sure links are visible if screen size is increased above threshold to hide links
 $(window).resize(function() {
-    if (screen.width > 386) {
+    if (screen.width >= 525) {
         $("#links").slideDown(1);
     };
 });
 
+////////// LANGUAGE FILTERS //////////
+
+//filter reset
+$(function() {
+  $('#reset-lang').click(function(){
+    if ($('.lang-icon').hasClass('disabled')) {
+      $('.lang-icon').removeClass('disabled').addClass('active');
+    }
+    $('.project').show();
+  });
+});
+
+//C# filtering
+$(function(){
+  $('#csharp-icon').click(function(){
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active').addClass('disabled');
+      $('.project[data-lang="csharp"]').hide();
+    } else if ($(this).hasClass('disabled')) {
+      $(this).removeClass('disabled').addClass('active');
+      $('.project[data-lang="csharp"]').show();
+    }
+  })
+});
+
+//Python filtering
+$(function(){
+  $('#python-icon').click(function(){
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active').addClass('disabled');
+      $('.project[data-lang="python"]').hide();
+    } else if ($(this).hasClass('disabled')) {
+      $(this).removeClass('disabled').addClass('active');
+      $('.project[data-lang="python"]').show();
+    }
+  })
+});
+
+//JS filtering
+$(function(){
+  $('#js-icon').click(function(){
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active').addClass('disabled');
+      $('.project[data-lang="js"]').hide();
+    } else if ($(this).hasClass('disabled')) {
+      $(this).removeClass('disabled').addClass('active');
+      $('.project[data-lang="js"]').show();
+    }
+  })
+});
+
+////////// LIGHTBOX //////////
 
 // lightbox for project screenshots
 $(function(){
@@ -73,22 +112,5 @@ $(function(){
     // Click anywhere to close lightbox window
     $('body').on('click', '#lightbox', function() {
         $('#lightbox').remove();
-    });
-});
-
-// JQuery for contact form popup
-$(function(){
-    $("#contact-btn").click(function(){
-        if ($(':animated').length) {
-            return false;
-        }
-        $("#contact-popup").slideDown(500);
-    });
-
-    $("#close").click(function(){
-        if ($(':animated').length) {
-            return false;
-        }
-        $("#contact-popup").slideUp(500);
     });
 });
