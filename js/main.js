@@ -8,7 +8,7 @@ $(function(){
             return false;
         }
         $("#links").slideDown(500);
-        $("#navbar").css("height", "370px");
+        $("#navbar").css("height", "390px");
     });
 
     $("#mobile-arrow").click(function(){
