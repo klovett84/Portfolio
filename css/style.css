@@ -395,27 +395,7 @@ footer img {
   }
 }
 
-
-@media screen and (max-width: 769px) {
-  .projects-container {
-    width: 100%;
-    grid-template-columns: 100%;
-  }
-
-  .project {
-    padding: 20px;
-    background-color: none;
-  }
-
-  .project:nth-child(even) {
-  background-color: #d8dad3;
-  }
-  .project:nth-child(odd) {
-  background-color: #f1f2eb;
-  }
-}
-
-@media screen and (max-width: 526px) {
+@media screen and (max-width: 900px) {
   #navbar h1 {
     margin-left: 10px;
   }
@@ -438,7 +418,28 @@ footer img {
   #navbar ul li a {
     text-align: center;
   }
-    
+}
+
+@media screen and (max-width: 769px) {
+  .projects-container {
+    width: 100%;
+    grid-template-columns: 100%;
+  }
+
+  .project {
+    padding: 20px;
+    background-color: none;
+  }
+
+  .project:nth-child(even) {
+  background-color: #d8dad3;
+  }
+  .project:nth-child(odd) {
+  background-color: #f1f2eb;
+  }
+}
+
+@media screen and (max-width: 526px) {    
   .project {
     width: 100%;
     padding: 20px;

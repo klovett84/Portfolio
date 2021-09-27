@@ -23,7 +23,7 @@ $(function(){
 
 // make sure links are visible if screen size is increased above threshold to hide links
 $(window).resize(function() {
-    if (screen.width >= 525) {
+    if (screen.width >= 900) {
         $("#links").slideDown(1);
     };
 });
